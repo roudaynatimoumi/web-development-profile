@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A responsive learner profile built with HTML and CSS.">
+    <title>Web Development Learner Profile</title>
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: #edf1f8;
+        color: #202845;
+        font: 1rem/1.6 "DM Sans", system-ui, sans-serif;
+      }
+      .container { width: 700px; max-width: calc(100% - 2rem); margin: 3rem auto; }
+      .card { margin-bottom: 1rem; padding: 2rem; border-radius: 1rem; background: #fff; }
+      .intro { background: #27215b; color: #fff; text-align: center; }
+      .avatar {
+        display: grid;
+        place-items: center;
+        width: 4rem;
+        height: 4rem;
+        margin: 0 auto 1rem;
+        border-radius: 50%;
+        background: #e4dfff;
+        color: #27215b;
+        font: bold 1.2rem monospace;
+      }
+      h1, h2 { margin: 0 0 .5rem; line-height: 1.2; }
+      h1 { font-size: clamp(1.8rem, 5vw, 2.8rem); }
+      p, ul { margin: 0; }
+      a { color: #3f318e; text-underline-offset: .2em; }
+      a:hover { color: #6b3faa; }
+      a:focus-visible { outline: 2px solid currentColor; outline-offset: .2em; }
+      .list-inline { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; padding: 0; list-style: none; }
+      @media (max-width: 540px) {
+        .container { margin-block: 1rem; }
+        .card { padding: 1.25rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <header class="card intro">
+        <div class="avatar" aria-hidden="true">&lt;/&gt;</div>
+        <h1>Web Development Learner</h1>
+        <p>A responsive profile built with HTML and CSS.</p>
+      </header>
+      <section class="card" aria-labelledby="about">
+        <h2 id="about">About this project</h2>
+        <p>This profile uses semantic HTML to organize its content and reusable CSS classes to style its cards. The layout adapts to narrow screens with a media query.</p>
+      </section>
+      <section class="card" aria-labelledby="resources">
+        <h2 id="resources">Learning resources</h2>
+        <ul class="list-inline">
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML reference</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS reference</a></li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
